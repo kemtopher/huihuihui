@@ -1,0 +1,13 @@
+<div class="form-page-wrapper">
+
+	<ul class="project-list">
+		<% @projects.each do |p| %>
+			<li>
+				<%= link_to p do %>
+					<h2><%= p.title %></h2>
+				<% end %>
+			</li>
+		<% end %>
+	</ul>
+
+</div>

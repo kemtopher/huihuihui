@@ -1,0 +1,77 @@
+// PROJECT FORMS
+
+.form-page-wrapper {
+	width: 100%;
+	margin-top: 70px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .form-block {
+    	min-width: 350px;
+
+    	h1 {
+    		margin-bottom: 2em;
+    	}
+
+	    form {
+	    	display: flex;
+	    	flex-direction: column;
+
+	    	input[type="text"], input[type="password"], input[type="email"] {
+				margin-bottom: 2em;
+				padding: 1em 0.5em; 
+	    	}
+	    	input[type="submit"] {
+	    		margin-top: 2em;
+	    		padding: 2em;
+
+	    		&:hover {
+	    			cursor: pointer;
+	    		}
+	    	}
+	    }
+	}
+}
+
+
+// PROJECT SHOW BACKEND
+
+.project-splash-wrap {
+	max-width: 600px;
+	min-width: 350px;
+
+	.project-splash {
+		img {
+			width: 100%;
+		}
+	}
+}
+
+
+
+// PROJECT OPTIONS PARTIAL
+
+.project-options {
+		width: 100%;
+		padding: 1em 0;
+
+		li {
+			display: inline;
+			margin-right: 2em;
+
+			a {
+				color: teal;
+
+				&:hover {
+					color: blue;
+				}
+			}
+		}
+	}
+
+
+
+
+

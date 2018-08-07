@@ -1,0 +1,51 @@
+<header id="header">
+	<section class="info-section">
+		<div class="info-wrap">
+			<div class="info-copy">
+				<p>Hui Chen Ou Yang is a multidisciplinary designer based in New York. She has spent her life living in various cities: Surabaya, Indonesia; Taipei, Taiwan; San Francisco, U.S.A.; and now calls New York City her home. Previously Hui has worked at Apple, Small Stuff, afreeman, and her work has been recognized by the Type Directors Club and Art Director’s Club Chinese Young Guns. Currently, she is going through a lot of underground feminist comix, listening to occult podcasts, and making fish wontons from scratch.</p>
+				<p class="give-thanks">development by <a href="christopherkemeza.com">christopher kemeza</a></p>
+			</div>
+			<div class="ext-nav">
+				<a href="mailto:huichenouyang@gmail.com?Subject=Hello%20There" target="_top""><h3>EMAIL</h3></a>
+				<a href="https://www.linkedin.com/in/huioy"><h3>LINKEDIN</h3></a>
+				<a href="https://www.instagram.com/hui_oui"><h3>INSTAGRAM</h3></a>
+				<a href="https://twitter.com/langhuige_arts"><h3>TWITTER</h3></a>
+				<a href="http://hui-oy.tumblr.com"><h3>TUMBLR</h3></a>
+			</div>
+		</div>
+	</section>
+
+	<nav id="site-nav" class="site-nav">
+		<div class="identity">
+			<a href="/" id="#random_link">
+				<h3 class="site-title">HUI CHEN OU YANG</h3>
+			</a>
+		</div>
+
+		<div class="nav-links">
+
+			<% if user_signed_in? %>
+			<!-- <strong><%#= current_user.email %></strong>. -->
+			<%#= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
+				<%= link_to destroy_user_session_path, method: :delete do %>
+					<span id="sign-off-btn" class="nav-icon"></span>
+					<h3 class="no-mobile">SIGN OUT</h3>
+				<% end %>
+			<%# else %>
+			<%#= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
+			<%#= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+			<% end %>
+
+
+			<a href="https://www.huioy.com">
+				<span id="blog-btn" class="nav-icon"></span>
+				<h3 class="no-mobile">BLOG</h3>
+			</a>
+		
+			<a id="info" href="#">
+				<span id="info-btn" class="nav-icon info-btn"></span>
+				<h3 class="no-mobile">INFO</h3>
+			</a>
+		</div>
+	</nav>
+</header>

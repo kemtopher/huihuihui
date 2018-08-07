@@ -1,0 +1,42 @@
+<!-- <div class="form-page-wrapper">
+	<div class="project-splash-wrap">
+
+		<div class="project-splash">
+			<%#= image_tag( @project_image.first ) %>
+			<%#= image_tag('poster_droppin_millibars.png') %>
+		</div>
+
+		<ul class="project-list list-std">
+			<li><h1><%#= @project.title %></h1></li>
+			<li><h3><%#= @project.tags %></h3></li>
+			<li><p><%#= @project.description %></p></li>
+		</ul>
+
+		<%#= render 'shared/project_options' %>
+	</div>
+</div> -->
+
+<main id="main-container">
+	<div class="single-titles">
+		<h2><%= @project.title %></h2>
+		<h2 class="no-mobile">&mdash;<%= @project.tags %></h2>
+	</div>
+	<div class="single-content">
+		<div class="single-info">
+
+			<!-- Maybe sanitize data in controller before reaching views for cleanliness? -->
+			<%= @project.description.html_safe %>
+		</div>
+		<div class="single-portfolio">
+			
+			<% @project.images.each do |img| %>
+				<div class="single-img" style="background-image: url( <%= url_for img %> );"></div>
+			<% end %>
+
+			<div class="bottom-img"></div>
+		</div>
+	</div>
+
+	<%= render 'shared/project_footer' %>
+
+</main>

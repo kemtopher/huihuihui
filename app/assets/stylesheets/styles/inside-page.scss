@@ -1,0 +1,247 @@
+// SINGLE PROJECT PAGES
+
+.single-titles {
+    width: 100%;
+    padding: 4em 0 2em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h2 {
+        font-family: $serif;
+		font-size: 36px;
+		font-weight: 400;
+    	font-style: normal;
+		letter-spacing: 0.65px;
+		line-height: 34px;
+		margin: 0;
+    }
+}
+
+.single-content {
+    width: 100%;
+    // padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+
+    .single-info {
+        flex-basis: 33.33%;
+        height: 100%;
+        padding-right: 50px;
+
+        h3 {
+        	font-family: $sans-serif;
+        	font-size: 28px;
+        	font-weight: 400;
+        	font-style: normal;
+        	text-transform: uppercase;
+        	letter-spacing: 0.85px;
+			line-height: 35px;
+			margin: 0 0 18px 0;
+			a {
+				text-decoration: underline;
+			}
+        }
+        p {
+        	font-family: $sans-serif;
+			font-size: 20px;
+			font-weight: 400;
+    		font-style: normal;
+			letter-spacing: 0.65px;
+			line-height: 26px;
+			margin: 0;
+
+			a {
+				font-family: $sans-serif;
+				text-decoration: underline;
+				margin: 0;
+			}
+        }
+    }
+    .single-portfolio {
+        flex-basis: 66.66%;
+        height: 100%;
+
+        .single-img {
+            margin-bottom: 2em;
+            width: 100%;
+            @include aspect-ratio(6,4);
+
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    
+	.single-titles {
+		padding: 36px 0 20px 0;
+
+		h2 {
+			font-size: 32px;
+			letter-spacing: 0.65px;
+		}
+	}
+    .single-content {
+        flex-direction: column;
+
+        .single-info {
+        	h3 {
+        		padding: 0px 0 17px 0;
+        		font-size: 20px;
+        		letter-spacing: 0.85px;
+        		line-height: 27px;
+        	}
+			p {
+				padding-bottom: 28px;
+				font-size: 16px;
+				letter-spacing: 0.65px;
+				line-height: 23px;
+			}
+        }
+        .single-portfolio .single-img {
+			margin-bottom: 15px;
+		}
+        .single-portfolio .single-img:last-child {
+        	margin-bottom: 55px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px ) {
+	.single-titles {
+
+		h2 {
+			font-size: 32px;
+			letter-spacing: 0.65px;
+			line-height: 23px;
+		}
+	}
+	.single-content {
+
+		.single-info {
+			h3 {
+				font-size: 20px;
+				letter-spacing: 0.85px;
+				line-height: 27px;
+			}
+			p {
+				font-size: 16px;
+				line-height: 23px;
+			}
+		}
+		.single-portfolio .single-img {
+			margin-bottom: 12px;
+		}
+	}
+}
+
+
+.bottom-nav-window {
+	// height: 100vh;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+
+	#fixed-bottom-nav {
+		width: 100%;
+		min-height: 222px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 333;
+
+		.top-link {
+		    width:100%;
+		    padding: 0 2em;
+		    display: none;
+
+		    #top-link-icon figure{
+		        width: 82px;
+		        height:101px;
+		        margin: 0 0 55px 0;
+		        background-size: contain;
+		    }
+		}
+
+		
+	}
+}
+.single-project-nav {
+	display: none;
+    // width: 100%;
+    height: 64px;
+    padding: 0 2em;
+    border-top: 1px solid black;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+
+    .nav-title-wrap {
+    	display: flex;
+
+	    h3 {
+	        font-family: $sans-serif;
+	        font-size: 20px;
+	        font-weight: 400;
+			font-style: normal;
+	        letter-spacing: 0.85px;
+	        margin: 0 1.3em;
+	    }
+		
+	    .next-arrow, .prev-arrow {
+	        height: 18px;
+	        width: 21px;
+	        background-size: contain;
+	        background-repeat: no-repeat;
+	    }
+	    .next-arrow {
+	        background-position: center right;
+	    }
+	}
+}
+
+.project-nav-title {
+	display: none;
+}
+
+.rise-up {
+	display: flex !important;
+}
+
+.active-link {
+	display: block !important;
+}
+@media only screen and (max-width: 1000px ) {
+	.bottom-nav-window #fixed-bottom-nav .single-project-nav {
+		display: flex;
+	}
+}
+
+@media only screen and (max-width: 768px ) {
+	.bottom-nav-window #fixed-bottom-nav .single-project-nav {
+		height: 55px;
+
+		h3 {
+			font-size: 16px;
+			letter-spacing: 0.85px;
+		}
+		.next-arrow, .prev-arrow {
+			height: 16px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+

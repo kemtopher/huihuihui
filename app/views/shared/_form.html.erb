@@ -1,0 +1,23 @@
+<%= form_for @project do |f| %>
+	<%= f.label :title, 'Project Title' %>
+	<%= f.text_field :title %>
+
+	<%= f.label :tags, 'Project Tags' %>
+	<%= f.text_field :tags %>
+
+	<%= f.label :description, 'Nice Little Description' %>
+	<%= f.text_area :description, :class => "tinymce", size: "60x12" %>
+
+	<%= f.label :cursor, 'Styled Cursor' %>
+	<%= f.file_field :cursor %>
+
+	<%= f.label :poster_image, 'Poster Image' %>
+	<%= f.file_field :poster_image %>
+
+	<%= f.label :images, 'Project Images' %>
+	<%= f.file_field :images, multiple: true %>
+
+	<%= f.submit "Create Project" %>
+<% end %> 
+
+<%= tinymce %>

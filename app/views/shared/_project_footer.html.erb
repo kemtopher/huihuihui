@@ -1,0 +1,78 @@
+<div class="bottom-nav-window">
+		<div id="fixed-bottom-nav">
+			<div class="top-link">
+				<a href="#" id="top-link-icon">
+					<figure>
+						<svg width="82px" height="101px" viewBox="0 0 82 101" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						        <g id="Project-Page-1440:-Choking-Victim" transform="translate(-30.000000, -1411.000000)" stroke="#000000">
+						            <g id="arrow.up.desktop" transform="translate(30.000000, 1411.000000)">
+						                <g id="Group" transform="translate(41.000000, 51.000000) rotate(-90.000000) translate(-41.000000, -51.000000) translate(-9.000000, 11.000000)">
+						                    <polyline id="Path-9" stroke-width="1.1" points="60.1802665 0 100 39.9096632 60 80"></polyline>
+						                    <path d="M0,40 L100,40" id="Path-8" stroke-width="1.2"></path>
+						                </g>
+						            </g>
+						        </g>
+						    </g>
+						</svg>
+					</figure>
+				</a>
+			</div>
+
+			<div class="single-project-nav">
+
+				<div class="nav-title-wrap">
+					<%= link_to @project.prev do%>
+						<div class="prev-arrow">
+							<svg width="21px" height="18px" viewBox="0 0 21 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							        <g id="Project-Page-1440:-Choking-Victim" transform="translate(-30.000000, -1565.000000)" stroke="#000000">
+							            <g id="Footer" transform="translate(0.000000, 1541.000000)">
+							                <g id="arrow.left" transform="translate(30.000000, 24.000000)">
+							                    <g id="Group" transform="translate(11.000000, 9.000000) rotate(180.000000) translate(-11.000000, -9.000000) translate(1.000000, 1.000000)">
+							                        <polyline id="Path-9" stroke-width="1.1" points="12.0360533 0 20 7.98193264 12 16"></polyline>
+							                        <path d="M0,8 L20,8" id="Path-8" stroke-width="1.2"></path>
+							                    </g>
+							                </g>
+							            </g>
+							        </g>
+							    </g>
+							</svg>
+						</div>
+					<% end %>
+					<div class="project-nav-title">
+						<h3><%= link_to @project.prev.title, @project.prev %></h3>
+					</div>
+				</div>
+
+				<!-- <a class="index-link" href="../index.html">
+					<h3>INDEX</h3>
+				</a> -->
+
+				<div class="nav-title-wrap">
+					<div class="project-nav-title">
+						<h3><%= link_to @project.next.title, @project.next %></h3>
+					</div>
+					<%= link_to @project.next do %>
+						<div class="next-arrow">
+							<svg width="21px" height="18px" viewBox="0 0 21 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							        <g id="Project-Page-1440:-Choking-Victim" transform="translate(-1389.000000, -1565.000000)" stroke="#000000">
+							            <g id="Footer" transform="translate(0.000000, 1541.000000)">
+							                <g id="arrow.right" transform="translate(1389.000000, 24.000000)">
+							                    <g id="Group" transform="translate(0.000000, 1.000000)">
+							                        <polyline id="Path-9" stroke-width="1.1" points="12.0360533 0 20 7.98193264 12 16"></polyline>
+							                        <path d="M0,8 L20,8" id="Path-8" stroke-width="1.2"></path>
+							                    </g>
+							                </g>
+							            </g>
+							        </g>
+							    </g>
+							</svg>
+						</div>
+					<% end %>
+				</div>
+
+			</div>
+		</div>
+	</div>

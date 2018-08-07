@@ -1,0 +1,9 @@
+toolbar:
+  # - styleselect | bold italic | undo redo
+  - link
+plugins:
+  - link
+menubar: 
+  'insert format'
+block_formats: 
+  'Paragraph=p;Header 3=h3'
