@@ -4,7 +4,7 @@ class PagesController < ApplicationController
 
   
   def index
-  	@projects = Project.all.order('id ASC')
+  	@projects = Project.all
   	# @top_projects = @projects[0..3]
   	# @mid_projects = @projects[4..8]
   	# @special_project = Project.find(9)
