@@ -103,7 +103,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-image: image-url('https://s3.amazonaws.com/huioy.com/poster_box-vacant.png');
+            background-image: url('https://s3.amazonaws.com/huioy.com/poster_box-vacant.png');
             background-size: cover;
             background-position: center center;
         }
@@ -114,7 +114,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-image: image-url('https://s3.amazonaws.com/huioy.com/poster_tall-box-vacant.png');
+            background-image: url('https://s3.amazonaws.com/huioy.com/poster_tall-box-vacant.png');
             background-size: cover;
             background-position: center center;
         }
