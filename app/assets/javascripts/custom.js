@@ -45,12 +45,14 @@ $(document).ready(function() {
 	}, function() {
 		var posterHost = $(this).find(".project-box"),
 			posterImg = posterHost.attr("data-poster"),
-			bgPosition = posterHost.attr("data-position");
+			bgPosition = posterHost.attr("data-position"),
+			tallPristine = 'https://s3.amazonaws.com/huioy.com/poster_tall-box-vacant.png',
+			boxPristine = 'https://s3.amazonaws.com/huioy.com/poster_box-vacant.png';
 
 		if ( bgPosition == "#lowBG" ) {
-			$( bgPosition ).css('background-image', 'url( https://s3.amazonaws.com/huioy.com/poster_tall-box-vacant.png )' );	
+			$( bgPosition ).css('background-image', 'url(' + tallPristine + ')' );	
 		} else {
-			$( bgPosition ).css('background-image', 'url( https://s3.amazonaws.com/huioy.com/poster_box-vacant.png )' );
+			$( bgPosition ).css('background-image', 'url(' + boxPristine + ')' );
 		}
 	});
 
