@@ -48,9 +48,9 @@ $(document).ready(function() {
 			bgPosition = posterHost.attr("data-position");
 
 		if ( bgPosition == "#lowBG" ) {
-			$( bgPosition ).css('background-image', 'url( /public/images/poster_tall-box-vacant.png )' );	
+			$( bgPosition ).css('background-image', 'url( https://s3.amazonaws.com/huioy.com/poster_tall-box-vacant.png )' );	
 		} else {
-			$( bgPosition ).css('background-image', 'url( /public/images/poster_box-vacant.png )' );
+			$( bgPosition ).css('background-image', 'url( https://s3.amazonaws.com/huioy.com/poster_box-vacant.png )' );
 		}
 	});
 
