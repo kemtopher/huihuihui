@@ -10,7 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-// I REMOVED TURBOLINKS AS IT WAS INTERFERING WITH CUSTOM JAVASCRIPT
+// I REMOVED TURBOLINKS AS IT WAS INTERFERING WITH CUSTOM JAVASCRIPT. require turbolinks
 
 
 
@@ -25,5 +25,4 @@
 //= require 'plugins/debug.addIndicators'
 //= require 'plugins/animation.gsap'
 //= require tinymce
-//= require turbolinks
 //= require_tree .
