@@ -1,13 +1,11 @@
 <div class="form-page-wrapper">
 
-	<ul id="project-list" class="project-list">
-		<% @projects.each do |p| %>
-			<li id="">
-				<%= link_to p do %>
-					<h2><%= p.title %></h2>
-				<% end %>
-			</li>
+	<div id="project-list" data-url="<%= sort_projects_path %>">
+		<% @projects.each do |proj| %>
+			<%= link_to proj, id: dom_id(proj) do %>
+				<h2><%= proj.title %></h2>
+			<% end %>
 		<% end %>
-	</ul>
+	</div>
 
 </div>

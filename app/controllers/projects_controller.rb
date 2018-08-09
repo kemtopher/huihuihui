@@ -31,7 +31,13 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.all
+    @projects = Project.order(:position)
+  end
+
+  def sort
+    params[:project].each_with_index do |id, index|
+      Project.where(id: id).update_all(position: index + 1)
+    end
   end
 
   def show

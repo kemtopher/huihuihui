@@ -1,4 +1,7 @@
-$(document).ready(function() {
+// MUST OPEN SCRIPT LIKE THIS BECAUSE OF TURBOLINKS
+
+var ready;
+ready = function() {
 
 
 	// MENU 
@@ -115,7 +118,7 @@ $(document).ready(function() {
 	// });
 
 
-	$("#project-list").sortable();
+	
 
 
 
@@ -149,7 +152,10 @@ $(document).ready(function() {
 	// })
 	.addTo(controller);
 
-});
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
 
 
 
