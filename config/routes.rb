@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :projects
   root 'pages#index'
+
+  get 'my_image_url', to: 'pages#my_image_url'
   # root 'projects#new'
 end

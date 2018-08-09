@@ -16,8 +16,4 @@ class PagesController < ApplicationController
   	@bottom_projects = @projects.offset(9).limit(8)  
   end
 
-
-  
-  
-
 end
