@@ -13,8 +13,11 @@
 // I REMOVED TURBOLINKS AS IT WAS INTERFERING WITH CUSTOM JAVASCRIPT
 
 
-//= require jquery
+
 //= require rails-ujs
+//= require jquery
+//= require jquery-ui/widget
+//= require jquery-ui/sortable
 //= require 'greensock/jquery.gsap.js'
 //= require 'greensock/TweenMax'
 //= require 'greensock/easing/EasePack'
@@ -22,4 +25,5 @@
 //= require 'plugins/debug.addIndicators'
 //= require 'plugins/animation.gsap'
 //= require tinymce
+//= require turbolinks
 //= require_tree .

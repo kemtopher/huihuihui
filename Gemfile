@@ -40,6 +40,11 @@ gem 'greensock-rails'
 # Use ActiveStorage variant
 gem 'mini_magick', '~> 4.8'
 
+
+gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
+gem 'acts_as_list'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
