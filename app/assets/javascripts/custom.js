@@ -115,6 +115,9 @@ $(document).ready(function() {
 	// });
 
 
+	$("#project-list").sortable();
+
+
 
 	// BOTTOM TO TOP LINK FUNCTION
 	
