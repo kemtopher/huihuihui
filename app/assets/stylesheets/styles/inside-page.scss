@@ -77,7 +77,7 @@
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
     
 	.single-titles {
 		padding: 36px 0 20px 0;
@@ -96,7 +96,7 @@
 
         .single-info {
         	h3 {
-        		padding: 0px 0 17px 0;
+        		// padding: 0px 0 17px 0;
         		font-size: 20px;
         		letter-spacing: 0.85px;
         		line-height: 27px;
@@ -148,103 +148,9 @@
 }
 
 
-.bottom-nav-window {
-	// height: 100vh;
-	width: 100%;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	z-index: 1;
 
-	#fixed-bottom-nav {
-		width: 100%;
-		// min-height: 222px;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		z-index: 333;
 
-		.top-link {
-		    width:100%;
-		    padding: 0 2em;
-		    display: none;
 
-		    #top-link-icon figure{
-		        width: 82px;
-		        height:101px;
-		        margin: 0 0 55px 0;
-		        background-size: contain;
-		    }
-		}
-
-		
-	}
-}
-.single-project-nav {
-	display: none;
-    // width: 100%;
-    height: 64px;
-    padding: 0 2em;
-    border-top: 1px solid black;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-
-    .nav-title-wrap {
-    	display: flex;
-
-	    h3 {
-	        font-family: $sans-serif;
-	        font-size: 20px;
-	        font-weight: 400;
-			font-style: normal;
-	        letter-spacing: 0.85px;
-	        margin: 0 1.3em;
-	    }
-		
-	    .next-arrow, .prev-arrow {
-	        height: 18px;
-	        width: 21px;
-	        background-size: contain;
-	        background-repeat: no-repeat;
-	    }
-	    .next-arrow {
-	        background-position: center right;
-	    }
-	}
-}
-
-.project-nav-title {
-	display: none;
-}
-
-.rise-up {
-	display: flex !important;
-}
-
-.active-link {
-	display: block !important;
-}
-@media only screen and (max-width: 1000px ) {
-	.bottom-nav-window #fixed-bottom-nav .single-project-nav {
-		display: flex;
-	}
-}
-
-@media only screen and (max-width: 768px ) {
-	.bottom-nav-window #fixed-bottom-nav .single-project-nav {
-		height: 55px;
-
-		h3 {
-			font-size: 16px;
-			letter-spacing: 0.85px;
-		}
-		.next-arrow, .prev-arrow {
-			height: 16px;
-		}
-	}
-}
 
 
 

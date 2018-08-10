@@ -138,7 +138,7 @@
     padding-left: 0;
 }
 
-@media only screen and ( max-width: 1100px ) {
+@media only screen and ( max-width: 1024px ) {
     .project-block {
         flex-direction: column;
     }
@@ -154,45 +154,17 @@
     .project-box {
 
         h2 {
-            font-size: 28px;
+            // font-size: 28px;
             margin: 0;
 
             &:first-child {
-                margin-bottom: 0;
+                // margin-bottom: 0;
             }
         }
 
     }
 }
 
-
-// @media only screen and ( max-width: 1150px ) {
-//     .image-pad {
-//         .image {
-//             height: 382px;
-//             width: 575px;
-//         }
-//         .tall-image {
-//             height: 800px;
-//             width: 533px;
-//         }
-//     }
-//     .project-box h2 {
-//         font-size: 18px;
-
-//         &:first-child {
-//             margin-bottom: 0.3em;
-//         }
-//     }
-//     .tall-project-wrap {
-//         .project-wrap {
-//             height: 103px;
-//         }
-//     }
-//     .full-width-row {
-//         height: 103px;
-//     }
-// }
 
 
 @media only screen and (max-width: 768px) {
