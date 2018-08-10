@@ -11,7 +11,8 @@
 
 
 .project-titles {
-    width: 50%;
+    flex-basis: 50%;
+    flex-grow: 2;
 }
 
 .project-image {
@@ -136,6 +137,25 @@
 }
 .mid-pad {
     padding-left: 0;
+}
+
+@media only screen and (min-width: 2000px) {
+    .image-pad {
+
+        .image {
+            width: 1236px;
+            height: 824px;
+        }
+        .tall-image {
+            height: 1855px;
+        }
+    }
+    .tall-project-wrap .project-wrap {
+        height: 12.5%;
+    }
+    .full-width-row {
+        height: 236px;
+    }
 }
 
 @media only screen and ( max-width: 1024px ) {
