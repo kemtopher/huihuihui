@@ -116,8 +116,10 @@
         .give-thanks {
             font-family: $sans-serif;
             font-size: 20px;
+            font-weight: 200;
             letter-spacing: 0.65px;
             line-height: 26px;
+            text-transform: uppercase;
 
             a {
                 text-decoration: underline;
