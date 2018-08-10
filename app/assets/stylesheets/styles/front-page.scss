@@ -145,20 +145,34 @@
         .image {
             width: 1236px;
             height: 824px;
+    //             width: 1000px;
+    // height: 666px;
         }
         .tall-image {
             height: 1855px;
         }
     }
+    
+    
+    .project-box h2 {
+        font-size: 50px;
+        line-height: 63px;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .image-pad .image {
+        width: 1000px;
+        height: 666px;
+    }
+    .image-pad .tall-image {
+        height: 1500px;
+    }
     .tall-project-wrap .project-wrap {
         height: 12.5%;
     }
     .full-width-row {
-        height: 236px;
-    }
-    .project-box h2 {
-        font-size: 50px;
-        line-height: 63px;
+        height: 192px;
     }
 }
 
