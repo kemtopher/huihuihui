@@ -4,6 +4,17 @@ var ready;
 ready = function() {
 
 
+	$("#project-list").sortable({
+		update: function(e, ui) {
+			Rails.ajax({
+				url: $(this).data("url"),
+				type: "PATCH",
+				data: $(this).sortable('serialize')
+			});
+		}
+	});
+
+
 	// MENU 
 
 	$('#info').click( function(e) {

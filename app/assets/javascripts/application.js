@@ -22,5 +22,4 @@
 //= require 'plugins/debug.addIndicators'
 //= require 'plugins/animation.gsap'
 //= require tinymce
-//= require turbolinks
 //= require_tree .
