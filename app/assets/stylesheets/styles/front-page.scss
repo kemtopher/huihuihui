@@ -169,7 +169,7 @@
 
 @media only screen and (max-width: 768px) {
     .project-wrap {
-        padding: 24px 0;
+        padding: 14px 0;
         // cursor: pointer !important;
     }
     .project-box {
@@ -179,15 +179,19 @@
 
             &:first-child {
                 letter-spacing: 0.55px;
-                font-size: 24px;
+                font-size: 18px;
+                margin-bottom: 0;
             }
 
             &:last-child {
                 letter-spacing: 1px;
-                font-size: 24px;
+                font-size: 18px;
             }
         }
 
+    }
+    .full-width-row, .tall-project-wrap .project-wrap {
+        height: auto;
     }
 }
 
