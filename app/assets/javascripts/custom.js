@@ -34,7 +34,8 @@ ready = function() {
 
 			$('#info-btn').toggleClass('info-btn-active');
 		});
-	})
+	});
+
 
 
 	// BOTTOM NAVIGATION TITLES

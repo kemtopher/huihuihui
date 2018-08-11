@@ -41,7 +41,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:id])
+    @project = Project.friendly.find(params[:id])
     @project_images = @project.images
   end
 
@@ -51,7 +51,7 @@ class ProjectsController < ApplicationController
     end
 
     def find_project
-      @project = Project.find(params[:id])
+      @project = Project.friendly.find(params[:id])
     end
 
 

@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # Devise gem for authentication
 gem 'devise'
 
+gem 'friendly_id'
 # WYSIWYG editor for admin
 gem 'tinymce-rails'
 
