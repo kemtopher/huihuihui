@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
 	before_action :find_project, only: [ :show, :edit, :update, :destroy]
+  before_action :must_be_admin, only: [:edit, :destroy, :create, :new, :update, :sort]
 
   def new
     @project = Project.new
@@ -12,6 +13,12 @@ class ProjectsController < ApplicationController
     else
       render :new
     end 
+  end
+
+  def must_be_admin
+    unless current_user && current_user.admin?
+      redirect_to new_user_session_path, notice: "Admin Needed."
+    end
   end
 
   def update
