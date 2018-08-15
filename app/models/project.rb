@@ -2,6 +2,7 @@ class Project < ApplicationRecord
 	extend FriendlyId
 	friendly_id :title, :use => :slugged
 	validates :title, :tags, :description, presence: true
+	
 	has_many_attached :images
 	has_one_attached :cursor
 	has_one_attached :poster_image
