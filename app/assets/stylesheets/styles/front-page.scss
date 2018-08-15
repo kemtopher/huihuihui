@@ -89,6 +89,9 @@
         height: 120px;
     }
 }
+.last-project-block {
+    margin-bottom: 42px;
+}
 
 .image-pad {
     padding: 15px;
@@ -130,13 +133,13 @@
     }
 }
 .tall-project-image {
-    padding-right: 0;
+    padding: 15px 0 15px 2em;
 }
 .top-pad {
-    padding-right: 0;
+    padding: 15px 0 15px 2em;
 }
 .mid-pad {
-    padding-left: 0;
+    padding: 15px 2em 15px 0;
 }
 
 @media only screen and (min-width: 2000px) {
