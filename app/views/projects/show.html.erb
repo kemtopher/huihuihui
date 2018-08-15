@@ -30,7 +30,9 @@
 		<div class="single-portfolio">
 			
 			<% @project.images.each do |img| %>
-				<div class="single-img" style="background-image: url( <%= url_for img %> );"></div>
+				<div class="single-img">
+					<%= image_tag img %>
+				</div>
 			<% end %>
 
 			<div class="bottom-img"></div>

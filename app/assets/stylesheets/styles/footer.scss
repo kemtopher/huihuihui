@@ -21,8 +21,8 @@
 
 		    #top-link-icon figure{
 		        width: 82px;
-		        height:101px;
-		        margin: 0 0 55px 0;
+		        height: 101px;
+		        margin: 0;
 		        background-size: contain;
 		    }
 		}
@@ -70,6 +70,7 @@
 
 .project-nav-title {
 	display: none;
+	text-transform: uppercase;
 }
 
 .rise-up {
