@@ -2,73 +2,66 @@
 var ready;
 ready = function() {
 
-function noMobile(x) {
-    if (x.matches) {
-    	// THESE FUCTIONS RUN WHEN NOT A MOBILE SIZED DEVISE
-        
-		// BOTTOM NAVIGATION TITLES
-		$('.nav-title-wrap').hover( function() {
-			$(this).children('.project-nav-title').css('display','block');
-		}, function() {
-			$(this).children('.project-nav-title').css('display','none');
-		});
+	function noMobile(x) {
+	    if (x.matches) {
+	    	// THESE FUCTIONS RUN WHEN NOT A MOBILE SIZED DEVISE
+	        
+			// BOTTOM NAVIGATION TITLES
+			$('.nav-title-wrap').hover( function() {
+				$(this).children('.project-nav-title').css('display','block');
+			}, function() {
+				$(this).children('.project-nav-title').css('display','none');
+			});
 
-		// PROJECT POSTERS ON HOVER
-		$(".project-wrap").hover(
-			function() {
+			// PROJECT POSTERS ON HOVER
+			$(".project-wrap").hover(
+				function() {
+					var posterHost = $(this).find(".project-box"),
+						posterImg = posterHost.attr("data-poster"),
+						bgPosition = posterHost.attr("data-position");
+
+						$( bgPosition ).css( 'background-image','url(' + posterImg + ')' );
+
+			}, function() {
 				var posterHost = $(this).find(".project-box"),
 					posterImg = posterHost.attr("data-poster"),
-					bgPosition = posterHost.attr("data-position");
+					bgPosition = posterHost.attr("data-position"),
+					tallPristine = 'https://s3.amazonaws.com/huioy.com/poster_tall-box-vacant.png',
+					boxPristine = 'https://s3.amazonaws.com/huioy.com/poster_box-vacant.png';
 
-					$( bgPosition ).css( 'background-image','url(' + posterImg + ')' );
+				if ( bgPosition == "#lowBG" ) {
+					$( bgPosition ).css('background-image', 'url(' + tallPristine + ')' );	
+				} else {
+					$( bgPosition ).css('background-image', 'url(' + boxPristine + ')' );
+				}
+			});
 
-		}, function() {
-			var posterHost = $(this).find(".project-box"),
-				posterImg = posterHost.attr("data-poster"),
-				bgPosition = posterHost.attr("data-position"),
-				tallPristine = 'https://s3.amazonaws.com/huioy.com/poster_tall-box-vacant.png',
-				boxPristine = 'https://s3.amazonaws.com/huioy.com/poster_box-vacant.png';
+			// PROJECT CURSOR CHANGES
+			$(".project-wrap").hover( function() {
+				var pointerImg = $(this).attr("data-cursor"),
+					pointerWrap = $(this).find('a');
 
-			if ( bgPosition == "#lowBG" ) {
-				$( bgPosition ).css('background-image', 'url(' + tallPristine + ')' );	
-			} else {
-				$( bgPosition ).css('background-image', 'url(' + boxPristine + ')' );
-			}
-		});
+				$( pointerWrap ).css('cursor', 'url(' + pointerImg + '), auto' );
 
-		// PROJECT CURSOR CHANGES
-		$(".project-wrap").hover( function() {
-			var pointerImg = $(this).attr("data-cursor"),
-				pointerWrap = $(this).find('a');
+			}, function() {
+				var pointerImg = $(this).attr("data-cursor"),
+					pointerWrap = $(this).find('a');
 
-			$( pointerWrap ).css('cursor', 'url(' + pointerImg + '), auto' );
+				$( pointerWrap ).css('cursor', 'pointer');
+			});
 
-		}, function() {
-			var pointerImg = $(this).attr("data-cursor"),
-				pointerWrap = $(this).find('a');
+	    } else {
+	    	console.log("h e l l o  m o t o");
+	    }
+	};
 
-			$( pointerWrap ).css('cursor', 'pointer');
-		});
-
-    } else {
-    	console.log("h e l l o  m o t o");
-    }
-};
-
-var x = window.matchMedia("(min-width: 769px)")
-noMobile(x) // Call listener function at run time
-x.addListener(noMobile) // Attach listener function on state changes
+	var x = window.matchMedia("(min-width: 769px)")
+	noMobile(x) // Call listener function at run time
+	x.addListener(noMobile) // Attach listener function on state changes
 
 
 
-
-
-
-
-
-
-
-
+	// JQUERY SORTABLE IN PROJECTS
 
 	$("#project-list").sortable({
 		update: function(e, ui) {
@@ -101,38 +94,6 @@ x.addListener(noMobile) // Attach listener function on state changes
 			$('#info-btn').toggleClass('info-btn-active');
 		});
 	});
-
-
-	// RANDOM LINK FOR TITLE CLICK
-	// $('#random_link').click(
-	// 	function(e) {
-	// 		e.preventDefault();
-
-	// 		var links = [
-	//               "../pages/pages/3d.html",
-	//               "../pages/pages/about-the-work.html",
-	//               "../pages/pages/apple.html",
-	//               "../pages/pages/baby-making-music-fortunes.html",
-	//               "../pages/pages/banned-china.html",
-	//               "../pages/pages/boston-prep.html",
-	//               "../pages/pages/choking-victim.html",
-	//               "../pages/pages/daily-headlines.html",
-	//               "../pages/pages/droppin-millibars.html",
-	//               "../pages/pages/elenis-cookies.html",
-	//               "../pages/pages/event-posters.html",
-	//               "../pages/pages/nightsnack-club-tote.html",
-	//               "../pages/pages/parasite-museum.html",
-	//               "../pages/pages/runaway-inequality-flyer.html",
-	//               "../pages/pages/seasense-stationery.html",
-	//               "../pages/pages/squoval-sans.html",
-	//               "../pages/pages/tri-it-at-home-cookbooks.html"
-	//         ];
-	//         // console.log(links);
-
-	//         var i = parseInt( Math.random() * sites.length);
-
-	//         location.href = sites[i];
-	// });
 
 
 	// SCROLL TO TOP LINK
