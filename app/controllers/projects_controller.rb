@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
 	before_action :find_project, only: [ :show, :edit, :update, :destroy]
-  before_action :must_be_admin, only: [:edit, :destroy, :create, :new, :update, :sort]
+  # before_action :must_be_admin, only: [:edit, :destroy, :create, :new, :update, :sort]
+  before_action :authenticate_user!, :except => [:show]
 
   def new
     @project = Project.new
@@ -13,12 +14,6 @@ class ProjectsController < ApplicationController
     else
       render :new
     end 
-  end
-
-  def must_be_admin
-    unless current_user
-      redirect_to new_user_session_path, notice: "Admin Needed."
-    end
   end
 
   def update
@@ -53,6 +48,12 @@ class ProjectsController < ApplicationController
   end
 
   private 
+    # def must_be_admin
+    #   unless current_user
+    #     redirect_to new_user_session_path, notice: "Admin Needed."
+    #   end
+    # end
+
     def project_params
       params.require(:project).permit( :title, :tags, :description, :cursor, :poster_image, images:[] )
     end
