@@ -51,7 +51,7 @@ function noMobile(x) {
 		});
 
     } else {
-    	console.log('some js has been disabled');
+    	console.log("h e l l o  m o t o");
     }
 };
 
