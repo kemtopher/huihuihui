@@ -6,20 +6,30 @@
 				<p class="give-thanks">development by <a href="christopherkemeza.com">christopher kemeza</a></p>
 			</div>
 			<div class="ext-nav">
-				<a href="mailto:huichenouyang@gmail.com?Subject=Hello%20There" target="_top""><h3>EMAIL</h3></a>
-				<a href="https://www.linkedin.com/in/huioy"><h3>LINKEDIN</h3></a>
-				<a href="https://www.instagram.com/hui_oui"><h3>INSTAGRAM</h3></a>
-				<a href="https://twitter.com/langhuige_arts"><h3>TWITTER</h3></a>
-				<a href="http://hui-oy.tumblr.com"><h3>TUMBLR</h3></a>
+				<%= link_to "mailto:huichenouyang@gmail.com?Subject=Hello%20There", target: '_top' do %>
+					<%= content_tag(:h3, "EMAIL") %>
+				<% end %>
+				<%= link_to "https://www.linkedin.com/in/huioy", target: '_bank' do %>
+					<%= content_tag(:h3, "LINKEDIN") %>
+				<% end %>
+				<%= link_to "https://www.instagram.com/hui_oui", target: '_blank' do %>
+					<%= content_tag(:h3, "INSTAGRAM") %>
+				<% end %>
+				<%= link_to "https://twitter.com/langhuige_arts", target: '_blank' do %>
+					<%= content_tag(:h3, "TWITTER") %>
+				<% end %>
+				<%= link_to "http://hui-oy.tumblr.com", target: '_blank' do %>
+					<%= content_tag(:h3, "TUMBLR") %>
+				<% end %>
 			</div>
 		</div>
 	</section>
 
 	<nav id="site-nav" class="site-nav">
 		<div class="identity">
-			<a href="/" id="#random_link">
-				<h3 class="site-title">HUI CHEN OU YANG</h3>
-			</a>
+			<%= link_to root_path, id: "#random_link" do %>
+				<%= content_tag(:h3, "HUI CHEN OU YANG", class: "site-title") %>
+			<% end %>
 		</div>
 
 		<div class="nav-links">

@@ -269,13 +269,14 @@
             }
         }
     }
+    #header.open {
+        height: 100vh;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
+    }
 }
-#header.open {
-    height: 100vh;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-}
+
 .info-btn {
     background-image: image-url('/icons/btn-info.png');
 }
