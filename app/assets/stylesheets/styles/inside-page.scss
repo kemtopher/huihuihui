@@ -73,21 +73,18 @@
             margin-bottom: 2em;
             width: 100%;
             height: auto;
-            // @include aspect-ratio(6,4);
-
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-
-            &:last-child {
-            	margin-bottom: 0;
-            }
 
             img {
             	width: 100%;
             	height: auto;
             }
+			// USING NTH-LAST-CHILD 2 BECAUSE OF BOTTOM-IMG CLASS
+			// LAST-CHILD WILL NOT CALL BUT 2ND FROM LAST WILL
+            &:nth-last-child(2) {
+            	margin-bottom: 65px;
+            }
         }
+        
     }
 }
 
