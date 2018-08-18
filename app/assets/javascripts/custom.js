@@ -1,7 +1,73 @@
 // MUST OPEN SCRIPT LIKE THIS BECAUSE OF TURBOLINKS
-
 var ready;
 ready = function() {
+
+function noMobile(x) {
+    if (x.matches) {
+    	// THESE FUCTIONS RUN WHEN NOT A MOBILE SIZED DEVISE
+        
+		// BOTTOM NAVIGATION TITLES
+		$('.nav-title-wrap').hover( function() {
+			$(this).children('.project-nav-title').css('display','block');
+		}, function() {
+			$(this).children('.project-nav-title').css('display','none');
+		});
+
+		// PROJECT POSTERS ON HOVER
+		$(".project-wrap").hover(
+			function() {
+				var posterHost = $(this).find(".project-box"),
+					posterImg = posterHost.attr("data-poster"),
+					bgPosition = posterHost.attr("data-position");
+
+					$( bgPosition ).css( 'background-image','url(' + posterImg + ')' );
+
+		}, function() {
+			var posterHost = $(this).find(".project-box"),
+				posterImg = posterHost.attr("data-poster"),
+				bgPosition = posterHost.attr("data-position"),
+				tallPristine = 'https://s3.amazonaws.com/huioy.com/poster_tall-box-vacant.png',
+				boxPristine = 'https://s3.amazonaws.com/huioy.com/poster_box-vacant.png';
+
+			if ( bgPosition == "#lowBG" ) {
+				$( bgPosition ).css('background-image', 'url(' + tallPristine + ')' );	
+			} else {
+				$( bgPosition ).css('background-image', 'url(' + boxPristine + ')' );
+			}
+		});
+
+		// PROJECT CURSOR CHANGES
+		$(".project-wrap").hover( function() {
+			var pointerImg = $(this).attr("data-cursor"),
+				pointerWrap = $(this).find('a');
+
+			$( pointerWrap ).css('cursor', 'url(' + pointerImg + '), auto' );
+
+		}, function() {
+			var pointerImg = $(this).attr("data-cursor"),
+				pointerWrap = $(this).find('a');
+
+			$( pointerWrap ).css('cursor', 'pointer');
+		});
+
+    } else {
+    	console.log('some js has been disabled');
+    }
+};
+
+var x = window.matchMedia("(min-width: 769px)")
+noMobile(x) // Call listener function at run time
+x.addListener(noMobile) // Attach listener function on state changes
+
+
+
+
+
+
+
+
+
+
 
 
 	$("#project-list").sortable({
@@ -37,67 +103,6 @@ ready = function() {
 	});
 
 
-
-	// BOTTOM NAVIGATION TITLES
-
-	$('.nav-title-wrap').hover( function() {
-		$(this).children('.project-nav-title').css('display','block');
-	}, function() {
-		$(this).children('.project-nav-title').css('display','none');
-	});
-
-
-	// PROJECT POSTERS ON HOVER
-
-	$(".project-wrap").hover(
-		function() {
-			var posterHost = $(this).find(".project-box"),
-				posterImg = posterHost.attr("data-poster"),
-				bgPosition = posterHost.attr("data-position");
-
-				$( bgPosition ).css( 'background-image','url(' + posterImg + ')' );
-
-	}, function() {
-		var posterHost = $(this).find(".project-box"),
-			posterImg = posterHost.attr("data-poster"),
-			bgPosition = posterHost.attr("data-position"),
-			tallPristine = 'https://s3.amazonaws.com/huioy.com/poster_tall-box-vacant.png',
-			boxPristine = 'https://s3.amazonaws.com/huioy.com/poster_box-vacant.png';
-
-		if ( bgPosition == "#lowBG" ) {
-			$( bgPosition ).css('background-image', 'url(' + tallPristine + ')' );	
-		} else {
-			$( bgPosition ).css('background-image', 'url(' + boxPristine + ')' );
-		}
-	});
-
-
-	// PROJECT CURSOR CHANGES
-	
-	$(".project-wrap").hover( function() {
-		var pointerImg = $(this).attr("data-cursor"),
-			pointerWrap = $(this).find('a');
-
-		$( pointerWrap ).css('cursor', 'url(' + pointerImg + '), auto' );
-
-	}, function() {
-		var pointerImg = $(this).attr("data-cursor"),
-			pointerWrap = $(this).find('a');
-
-		$( pointerWrap ).css('cursor', 'pointer');
-	});
-	
-
-
-
-	// SCROLL TO TOP LINK
-
-	$('#top-link-icon').on( 'click',function(e) {
-		e.preventDefault();
-		$('html, body').animate({scrollTop:0},300);
-	})
-
-
 	// RANDOM LINK FOR TITLE CLICK
 	// $('#random_link').click(
 	// 	function(e) {
@@ -130,8 +135,12 @@ ready = function() {
 	// });
 
 
-	
+	// SCROLL TO TOP LINK
 
+	$('#top-link-icon').on( 'click',function(e) {
+		e.preventDefault();
+		$('html, body').animate({scrollTop:0},300);
+	})
 
 
 	// BOTTOM TO TOP LINK FUNCTION
