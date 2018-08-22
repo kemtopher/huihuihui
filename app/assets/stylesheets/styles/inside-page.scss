@@ -81,10 +81,12 @@
 			// USING NTH-LAST-CHILD 2 BECAUSE OF BOTTOM-IMG CLASS
 			// LAST-CHILD WILL NOT CALL BUT 2ND FROM LAST WILL
             &:nth-last-child(2) {
-            	margin-bottom: 65px;
+            	margin-bottom: 0px;
             }
         }
-        
+        .bottom-img {
+        	padding: 0.5em 0;
+        }
     }
 }
 

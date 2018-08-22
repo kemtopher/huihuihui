@@ -18,6 +18,7 @@
 //= require 'greensock/jquery.gsap.js'
 //= require 'greensock/TweenMax'
 //= require 'greensock/easing/EasePack'
+//= requrie 'plugins/animation.velocity'
 //= require 'ScrollMagic.js'
 //= require 'plugins/debug.addIndicators'
 //= require 'plugins/animation.gsap'
