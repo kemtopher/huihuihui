@@ -84,11 +84,11 @@ ready = function() {
 			if ( $('#header').hasClass('open') ) {
 				$('.site-nav').css('border-top','solid 1px #000000');
 				$('.info-section').slideDown();
-				$('#header').css('position','absolute');
+				// $('#header').css('position','absolute');
 			} else {
 				$('.site-nav').css('border-top','solid 0px #000000');
 				$('.info-section').slideUp();
-				$('#header').css('position','fixed');
+				// $('#header').css('position','fixed');
 			}
 
 			$('#info-btn').toggleClass('info-btn-active');

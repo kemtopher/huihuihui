@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
-	before_action :find_project, only: [ :show, :edit, :update, :destroy]
-  # before_action :must_be_admin, only: [:edit, :destroy, :create, :new, :update, :sort]
+	before_action :find_project, only: [ :show, :edit, :update, :destroy ]
+  before_action :must_be_admin, only: [ :destroy, :create, :new ]
   before_action :authenticate_user!, :except => [:show]
 
   def new
