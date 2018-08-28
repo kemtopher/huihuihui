@@ -104,8 +104,6 @@
 
 .info-section {
     padding: 25px 2em 35px 2em;
-    height: calc(100vh - 84px);
-    overflow-y: scroll;
     display: none;
 }
 .info-wrap {
@@ -207,6 +205,8 @@
 
     .info-section {
         padding: 19px 10px 0 10px;
+        height: calc(100vh - 84px);
+        overflow-y: scroll;
     }
 
     .info-wrap {
