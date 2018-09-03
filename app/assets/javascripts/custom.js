@@ -26,8 +26,8 @@ ready = function() {
 				var posterHost = $(this).find(".project-box"),
 					posterImg = posterHost.attr("data-poster"),
 					bgPosition = posterHost.attr("data-position"),
-					tallPristine = 'https://s3.amazonaws.com/huioy.com/poster_tall-box-vacant.png',
-					boxPristine = 'https://s3.amazonaws.com/huioy.com/poster_box-vacant.png';
+					tallPristine = '/images/poster_tall-box-vacant.png',
+					boxPristine = '/images/poster_box-vacant.png';
 
 				if ( bgPosition == "#lowBG" ) {
 					$( bgPosition ).css('background-image', 'url(' + tallPristine + ')' );	
