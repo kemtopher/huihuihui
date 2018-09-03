@@ -12,10 +12,14 @@
 	<div class="photos-block">
 		<h1>Photos</h1>
 		
-			<div class="single-photos">
+		<div class="single-photos">
+			<% if @project.poster_image.present? %>
 				<%= image_tag(polymorphic_url( @project.poster_image )) %>
+			<% end %>
+			<% if @project.cursor.present? %>
 				<%= image_tag(polymorphic_url( @project.cursor )) %>
-			</div>	
+			<% end %>
+		</div>	
 		
 		<div id="photos-list">
 			<% if @project.images.any? %>

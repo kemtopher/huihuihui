@@ -11,9 +11,7 @@ module PagesHelper
 
 
 	def data_poster_url(val)
-
 		# val.present? ? rails_blob_path( val, dispostition: "attachment", only_path: true ) : ActionController::Base.helpers.asset_url('poster_default.png')
-
 		if (val)
 			rails_blob_path( val, dispostition: "attachment", only_path: true )
 		else
