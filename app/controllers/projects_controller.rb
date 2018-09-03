@@ -35,13 +35,8 @@ class ProjectsController < ApplicationController
   def delete_image_attachment
     @image = ActiveStorage::Attachment.find(params[:id])
     @image.purge
-    redirect_to projects_path
+    redirect_back fallback_location: @project
   end
-  # def delete_image_attachment
-  #   # @photo = ActiveStorage::Blob.find_signed(params[:id])
-  #   @img = ActiveStorage::Attachment.find(params[:id])
-  #   @img.purge_later
-  # end
 
   def index
     @projects = Project.order(:position)
