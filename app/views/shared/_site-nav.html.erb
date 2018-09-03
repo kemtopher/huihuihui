@@ -4,7 +4,7 @@
 	<!-- <strong><%#= current_user.email %></strong>. -->
 	<%#= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
 		<%= link_to destroy_user_session_path, method: :delete do %>
-			<span id="sign-off-btn" class="nav-icon"></span>
+			<!-- <span id="sign-off-btn" class="nav-icon"></span> -->
 			<h3 class="no-mobile">SIGN OUT</h3>
 		<% end %>
 	<%# else %>
@@ -13,12 +13,16 @@
 	<% end %>
 
 	<a id="blog" href="http://hui-oy.tumblr.com" target="_blank">
-		<span id="blog-btn" class="nav-icon"></span>
+		<span id="blog-btn" class="nav-icon">
+			<%= render 'shared/blog-btn' %>
+		</span>
 		<h3>BLOG</h3>
 	</a>
 
 	<a id="info" href="#">
-		<span id="info-btn" class="nav-icon info-btn"></span>
+		<span id="info-btn" class="nav-icon info-btn">
+			<%= render 'shared/info-btn' %>
+		</span>
 		<h3>INFO</h3>
 	</a>
 </div>

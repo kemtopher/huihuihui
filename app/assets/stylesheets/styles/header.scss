@@ -240,20 +240,46 @@
     }
 }
 
-.info-btn {
-    background-image: image-url('/icons/btn-info.png');
-}
-#blog-btn {
-    background-image: image-url('/icons/btn-blog.png');
-}
+// HEADER SVG ICON STYLES
 
+.info-circ-styles {
+    fill:none;
+    stroke:#000000;
+}
+.info-icon-styles {
+    fill:#000000;
+}
 .info-btn-active {
-    background-image: image-url('/icons/btn-info-active.png') !important;
+    .info-circ-styles {
+        fill: #000000;
+    }
+    .info-icon-styles {
+        fill: #ffffff;
+    }
 }
 
-#sign-off-btn {
-    background-image: image-url('/icons/sign-off-btn.png');
+.blog-circ-styles {
+    fill:none;
+    stroke:#000000;
 }
+.blog-icon-styles {
+    fill:#000000;
+}
+
+// .info-btn {
+//     background-image: image-url('/icons/btn-info.png');
+// }
+// #blog-btn {
+//     background-image: image-url('/icons/btn-blog.png');
+// }
+
+// .info-btn-active {
+//     background-image: image-url('/icons/btn-info-active.png') !important;
+// }
+
+// #sign-off-btn {
+//     background-image: image-url('/icons/sign-off-btn.png');
+// }
  
 
 
