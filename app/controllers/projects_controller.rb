@@ -18,7 +18,8 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update(project_params)
-      redirect_to projects_path, notice: "Update Successful"
+      # redirect_to projects_path, notice: "Update Successful"
+      redirect_back fallback_location: projects_path
     else
       render 'edit'
     end
@@ -35,7 +36,7 @@ class ProjectsController < ApplicationController
   def delete_image_attachment
     @image = ActiveStorage::Attachment.find(params[:id])
     @image.purge
-    redirect_back fallback_location: @project
+    redirect_back fallback_location: projects_path
   end
 
   def index
