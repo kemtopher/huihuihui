@@ -121,18 +121,7 @@
             letter-spacing: 0.5px;
             line-height: 35px;
             margin-top: 0;
-        }
-        .give-thanks {
-            font-family: $sans-serif;
-            font-size: 16px;
-            font-weight: 200;
-            letter-spacing: 0.65px;
-            line-height: 26px;
-            text-transform: uppercase;
-
-            a {
-                text-decoration: underline;
-            }
+            margin-bottom: 0;
         }
     }
     .ext-nav {
@@ -159,7 +148,19 @@
         }
     }
 }
+.give-thanks {
+    font-family: $sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 0.65px;
+    line-height: 26px;
+    text-transform: uppercase;
+    margin: 25px 0 0 0;
 
+    a {
+        text-decoration: underline;
+    }
+}
 @media only screen and (max-width: 1024px) {
 
     .info-section {
@@ -237,6 +238,24 @@
                 flex-basis: 50%;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 375px ) {
+    .info-wrap {
+        .info-copy {
+            p {
+                &:last-child {
+                    margin-bottom: 35px;
+                }
+            }
+        }
+        .ext-nav {
+            margin-bottom: 35px;
+        }
+    }
+    .give-thanks {
+        margin-bottom: 55px;
     }
 }
 
