@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
 	before_action :find_project, only: [ :show, :edit, :update, :destroy ]
-  before_action :must_be_admin, only: [ :destroy, :create, :new ]
+  # before_action :must_be_admin, only: [ :destroy, :create, :new ]
   before_action :authenticate_user!, :except => [:show]
 
   def new
@@ -29,8 +29,19 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project.destroy
-    redirect_to root_path, notice: "Project Destroyed"
+    redirect_to projects_path, notice: "Project Destroyed"
   end
+
+  def delete_image_attachment
+    @image = ActiveStorage::Attachment.find(params[:id])
+    @image.purge
+    redirect_to projects_path
+  end
+  # def delete_image_attachment
+  #   # @photo = ActiveStorage::Blob.find_signed(params[:id])
+  #   @img = ActiveStorage::Attachment.find(params[:id])
+  #   @img.purge_later
+  # end
 
   def index
     @projects = Project.order(:position)

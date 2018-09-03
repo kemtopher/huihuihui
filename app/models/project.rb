@@ -8,7 +8,8 @@ class Project < ApplicationRecord
 	has_one_attached :poster_image
 
 
-
+	## GET THE NEXT AND PREVIOUS PROJECTS
+	
 	def next
 		Project.where("id > ?", id).order("id ASC").first || Project.first
 	end 

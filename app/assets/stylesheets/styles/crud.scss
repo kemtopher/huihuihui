@@ -3,9 +3,9 @@
 .form-page-wrapper {
 	width: 100%;
 	margin-top: 70px;
-    height: 100vh;
+    // height: 100vh;
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: center;
 
     .form-block {
@@ -32,6 +32,40 @@
 	    		}
 	    	}
 	    }
+	}
+	.photos-block {
+		margin-left: 2em;
+		max-width: 200px;
+
+		h1 {
+			margin-bottom: 2em;
+		}
+		.single-img {
+			position: relative;
+
+			.delete-me {
+				width: 15px;
+				height: 15px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				z-index: 33;
+			}
+			.proj-photo {
+				width: 100%;
+			} 
+		}
+		.single-default {
+			img {
+				width: 100%;
+			}
+		}
+		.single-photos {
+			margin-bottom: 2em;
+			img {
+				width: 50px;
+			}
+		}
 	}
 }
 

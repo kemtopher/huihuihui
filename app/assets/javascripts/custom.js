@@ -63,7 +63,7 @@ ready = function() {
 
 	// JQUERY SORTABLE IN PROJECTS
 
-	$("#project-list").sortable({
+	$("#project-list, #photos-list").sortable({
 		update: function(e, ui) {
 			Rails.ajax({
 				url: $(this).data("url"),

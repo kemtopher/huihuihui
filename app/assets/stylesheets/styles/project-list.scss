@@ -1,14 +1,23 @@
 $list-border: 1px solid #fafafa;
 
-
+#project-links {
+	width: 100%;
+	min-height: 200px;
+	padding: 25px 0;
+	display: flex;
+	justify-content: center;
+}
 #project-list {
 	display: flex;
 	flex-direction: column;
 
-	a {
-		padding: 0.75em 1.3em;
+	.project-row {
+		min-width: 300px;
+		padding: 0.75em 0 0.75em 1.3em;
 		background: #fafafa;
-
+		display: flex;
+		justify-content: space-between;
+		
 		&:first-child {
 			border-top: $list-border;
 		}
@@ -18,10 +27,27 @@ $list-border: 1px solid #fafafa;
 		&:nth-child(even) {
 			background: #ffffff;
 		}
-		h2 {
-			margin: 0;
-			font-size: 1em;
-			font-weight: 200;
+
+		a {
+
+			h2 {
+				margin: 0;
+				font-size: 1em;
+				font-weight: 200;
+			}
+		}
+		.project-btns {
+			align-self: flex-end;			
+			img {
+				width: 15px;
+				height: 15px;
+
+				&:last-child {
+					margin-left: 1em;
+				}
+			}
 		}
 	}
+
+	
 }

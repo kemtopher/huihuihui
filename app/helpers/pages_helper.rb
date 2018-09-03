@@ -2,8 +2,6 @@ module PagesHelper
 
 
 	def data_cursor_url(val)
-
-		
 		if (val)
 			rails_blob_path( val, disposition: "attachment", only_path: true )
 		else
@@ -14,13 +12,13 @@ module PagesHelper
 
 	def data_poster_url(val)
 
-		val.present? ? rails_blob_path( val, dispostition: "attachment", only_path: true ) : ActionController::Base.helpers.asset_url('poster_default.png')
+		# val.present? ? rails_blob_path( val, dispostition: "attachment", only_path: true ) : ActionController::Base.helpers.asset_url('poster_default.png')
 
-		# if (val)
-		# 	rails_blob_path( val, dispostition: "attachment", only_path: true )
-		# else
-		# 	ActionController::Base.helpers.asset_url('poster_default.png')
-		# end
+		if (val)
+			rails_blob_path( val, dispostition: "attachment", only_path: true )
+		else
+			ActionController::Base.helpers.asset_url('poster_default.png')
+		end
 	end
 
 end

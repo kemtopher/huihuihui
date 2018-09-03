@@ -2,10 +2,18 @@
 
 	<div id="project-list" data-url="<%= sort_projects_path %>">
 		<% @projects.each do |proj| %>
-			<%= link_to proj, id: dom_id(proj) do %>
-				<h2><%= proj.title %></h2>
-			<% end %>
+			<div class="project-row" id= "<%= dom_id(proj) %>">
+				<%= link_to proj.title, edit_project_path(proj) %>
+
+				<div class="project-btns">
+					<%= link_to image_tag('show-btn.png'), proj %>
+					<%= link_to image_tag('delete-btn.png'), proj, method: :delete, data: {confirm: "You sure?"} %>
+				</div>
+			</div>
 		<% end %>
 	</div>
-
+	
+</div>
+<div id="project-links">
+	<%= link_to "New Project", new_project_path %>
 </div>

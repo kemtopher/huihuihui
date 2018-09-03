@@ -8,6 +8,35 @@
 		<%= render 'shared/form' %>
 		<%= render 'shared/project_options' %>
 	</div>
+
+	<div class="photos-block">
+		<h1>Photos</h1>
+		
+			<div class="single-photos">
+				<%= image_tag(polymorphic_url( @project.poster_image )) %>
+				<%= image_tag(polymorphic_url( @project.cursor )) %>
+			</div>	
+		
+		<div id="photos-list">
+			<% if @project.images.any? %>
+				<% @project.images.each do |img| %>
+					<div class="single-img">
+						<%#= link_to image_tag('delete-btn.png', class: 'delete-me'), delete_image_attachment_project_url, method: :delete, data: { confirm: "You sure about that?" } %>
+						<%= image_tag(img, class: 'proj-photo') %>
+						<p><%= img.id %> - <%= link_to "Delete", delete_image_attachment_project_url( img ), 
+							method: :delete, 
+							data: { confirm: 'Are you sure?' } %> </p>
+						<%#= link_to image_tag('delete-btn.png'), img, method: :delete %>
+					</div>
+				<% end %>
+			<% else %>
+				<div class="single-img single-default">
+					<img src="https://via.placeholder.com/350x150">
+				</div>
+			<% end %>
+		</div>
+	</div>
+
 </div>
 
 
