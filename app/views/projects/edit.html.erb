@@ -21,10 +21,11 @@
 			<% end %>
 		</div>	
 		
-		<div id="photos-list">
+		<div id="photos-list" data-url="<%= sort_projects_path %>">
 			<% if @project.images.any? %>
 				<% @project.images.each do |img| %>
-					<div class="single-img">
+					<!-- <div class="single-img"  id= "<%#= dom_id(proj) %>"> -->
+						<div class="single-img">
 						<%#= link_to image_tag('delete-btn.png', class: 'delete-me'), delete_image_attachment_project_url, method: :delete, data: { confirm: "You sure about that?" } %>
 						<%= image_tag(img, class: 'proj-photo') %>
 						<p><%= img.id %> - <%= link_to "Delete", delete_image_attachment_project_url( img ), 
