@@ -9,7 +9,7 @@ class PagesController < ApplicationController
 		@mid_projects = @projects.limit(4).offset(4)
 		@special_project = @projects[8]
 		# @special_project = @projects.offset(8).limit(1)
-		@bottom_projects = @projects.limit(8).offset(9)  
+		@bottom_projects = @projects.limit(8).offset(9) 
 	end
 
 end
