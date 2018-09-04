@@ -18,8 +18,7 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update(project_params)
-      # redirect_to projects_path, notice: "Update Successful"
-      redirect_back fallback_location: projects_path
+      redirect_to projects_path, notice: "Update Successful"
     else
       render 'edit'
     end
