@@ -6,7 +6,7 @@
 		<li><%= link_to "Back Home", projects_path %></li>
 	<% elsif current_page?(controller: 'projects', action: "edit") %>
 		<li><%= link_to @project.prev.title, edit_project_path(@project.prev) %></li>
-		<li><%= link_to "Back Home", projects_path %></li>
+		<li><%= link_to "All Projects", projects_path %></li>
 		<li><%= link_to @project.next.title, edit_project_path(@project.next) %></li>
 	<% elsif current_page?(controller: 'projects', action: "new") %>
 		<li><%= link_to "Back Home", projects_path %></li>

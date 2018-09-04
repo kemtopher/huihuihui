@@ -17,7 +17,7 @@
 	<%= f.label :images, 'Project Images' %>
 	<%= f.file_field :images, multiple: true %>
 
-	<%= f.submit "Create Project" %>
+	<%= f.submit "#{action_name.capitalize} Project" %>
 <% end %> 
 
 <%= tinymce %>
