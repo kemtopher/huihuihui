@@ -28,7 +28,7 @@
 						<div class="single-img">
 						<%#= link_to image_tag('delete-btn.png', class: 'delete-me'), delete_image_attachment_project_url, method: :delete, data: { confirm: "You sure about that?" } %>
 						<%= image_tag(img, class: 'proj-photo') %>
-						<p><%#= img.id %><%= link_to "Delete", delete_image_attachment_project_url( img ), 
+						<p><%= number_to_human_size(img.blob.byte_size) %> - <%= link_to "Delete", delete_image_attachment_project_url( img ), 
 							method: :delete, 
 							data: { confirm: 'Are you sure?' } %> </p>
 						<%#= link_to image_tag('delete-btn.png'), img, method: :delete %>

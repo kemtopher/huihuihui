@@ -2,6 +2,7 @@ class ProjectsController < ApplicationController
 	before_action :find_project, only: [ :show, :edit, :update, :destroy ]
   # before_action :must_be_admin, only: [ :destroy, :create, :new ]
   before_action :authenticate_user!, :except => [:show]
+  helper_method :image_filesize
 
   def new
     @project = Project.new
@@ -38,6 +39,7 @@ class ProjectsController < ApplicationController
     @image.purge
     redirect_back fallback_location: projects_path
   end
+
 
   def index
     @projects = Project.order(:position)
