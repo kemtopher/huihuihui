@@ -23,14 +23,14 @@
 		
 		<div id="photos-list">
 			<% if @project.images.any? %>
-				<% @project.images.each do |img| %>
+				<% @project.images.order(id: :desc).each do |img| %>
 					<!-- <div class="single-img"  id= "<%#= dom_id(proj) %>"> -->
 						<div class="single-img">
 						<%#= link_to image_tag('delete-btn.png', class: 'delete-me'), delete_image_attachment_project_url, method: :delete, data: { confirm: "You sure about that?" } %>
 						<%= image_tag(img, class: 'proj-photo') %>
 						<p><%= number_to_human_size(img.blob.byte_size) %> - <%= link_to "Delete", delete_image_attachment_project_url( img ), 
 							method: :delete, 
-							data: { confirm: 'Are you sure?' } %> </p>
+							data: { confirm: 'Are you sure?' } %> - <%= img.blob.id %> </p>
 						<%#= link_to image_tag('delete-btn.png'), img, method: :delete %>
 					</div>
 				<% end %>

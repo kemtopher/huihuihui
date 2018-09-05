@@ -28,7 +28,7 @@
 		</div>
 		<div class="single-portfolio">
 			
-			<% @project.images.each do |img| %>
+			<% @project.images.order(id: :desc).each do |img| %>
 				<div class="single-img">
 					<%= image_tag img %>
 				</div>
