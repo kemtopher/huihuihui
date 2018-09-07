@@ -10,12 +10,20 @@ class Project < ApplicationRecord
 
 	## GET THE NEXT AND PREVIOUS PROJECTS
 	
+	# def next
+	# 	Project.where("id > ?", id).order("id ASC").first || Project.first
+	# end 
+
+	# def prev
+	# 	Project.where("id < ?", id).order("id DESC").first || Project.last
+	# end
+
 	def next
-		Project.where("id > ?", id).order("id ASC").first || Project.first
+		Project.where("position > ?", position).order("position ASC").first || Project.first
 	end 
 
 	def prev
-		Project.where("id < ?", id).order("id DESC").first || Project.last
+		Project.where("position < ?", position).order("position DESC").first || Project.last
 	end
 
 end
