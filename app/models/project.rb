@@ -18,6 +18,9 @@ class Project < ApplicationRecord
 	# 	Project.where("id < ?", id).order("id DESC").first || Project.last
 	# end
 
+
+	## PROJECTS NOT LOOPING FROM END TO BEGINNING 
+	## PROJECTS ALLOWING IN-ACTIVE PRODUCTS TO SORT
 	def next
 		Project.where("position > ?", position).order("position ASC").first || Project.first
 	end 

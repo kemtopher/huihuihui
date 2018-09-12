@@ -18,6 +18,8 @@ class ProjectsController < ApplicationController
   end
 
   def update
+    @projects = Project.order(:position)
+    
     if @project.update(project_params)
       # redirect_to projects_path, notice: "Update Successful"
       redirect_back fallback_location: projects_path

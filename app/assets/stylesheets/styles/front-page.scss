@@ -109,9 +109,12 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-image: url( asset_path('images/poster_box-vacant.png') );
+            background-image: url( asset_path('images/poster-box-vacant.png') );
             background-size: cover;
             background-position: center center;
+        }
+        .show-poster.reverse {
+            background-image: url( asset_path('images/poster-reverse-box-vacant.png'))
         }
 
         .tall-show-poster {
@@ -120,7 +123,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-image: url( asset_path('images/poster_tall-box-vacant.png') );
+            background-image: url( asset_path('images/poster-tall-box-vacant.png') );
             background-size: cover;
             background-position: center center;
         }
