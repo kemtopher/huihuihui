@@ -85,7 +85,7 @@ $(document).ready(function() {
 		};
 	});
 
-	detectswipe('swiper', function() {
+	detectswipe('site-nav', function() {
 		if ( $('#header').hasClass('open') ) {
 			closeMenu();
 		} else {
