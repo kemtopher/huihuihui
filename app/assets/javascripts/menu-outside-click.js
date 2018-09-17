@@ -8,10 +8,10 @@ $(document).ready(function() {
 		swipe_det.sY = 0;
 		swipe_det.eX = 0;
 		swipe_det.eY = 0;
-		// var min_x = 20;  //min x swipe for horizontal swipe
+		var min_x = 20;  //min x swipe for horizontal swipe
 		var max_x = 40;  //max x difference for vertical swipe
 		var min_y = 40;  //min y swipe for vertical swipe
-		// var max_y = 50;  //max y difference for horizontal swipe
+		var max_y = 50;  //max y difference for horizontal swipe
 		var direc = "";
 		ele = document.getElementById(el);
 
