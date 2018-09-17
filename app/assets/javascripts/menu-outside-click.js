@@ -85,7 +85,7 @@ $(document).ready(function() {
 		};
 	});
 
-	window.onscroll = function(ev) {
+	$('#swipe').onscroll = function(ev) {
 		innerWindowSection = $('#swipe');
 		if ( ( innerWindowSection.innerHeight + innerWindowSection.scrollY ) >= innerWindowSection.offsetHeight) {
 			detectswipe('swipe', function() {
