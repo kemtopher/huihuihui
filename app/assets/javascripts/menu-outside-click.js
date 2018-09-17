@@ -87,9 +87,14 @@ $(document).ready(function() {
 
 
     $('#swipe').on('scroll', function() {
-        if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-        detectswipe('swipe', closeMenu() );
-        console.log('here at the end');
+        if( $(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+        	$('#header').addClass('canClose');
+
+        	if ( $('#header').hasClass('canClose') ) {
+        		detectswipe('swipe', closeMenu() );
+	        	console.log('here at the end');	
+        	}
+	        
         }
     })
 
