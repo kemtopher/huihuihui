@@ -71,10 +71,12 @@ $(document).ready(function() {
 	};
 
 
+	// MAIN EVENT STARTER
+
 	$('#info').click( function(e) {
 		e.preventDefault();
 
-		if ( $('#header').hasClass('open') ) {
+		if ( !$('#header').hasClass('open') ) {
 			openMenu();
 		} else {
 			closeMenu();
