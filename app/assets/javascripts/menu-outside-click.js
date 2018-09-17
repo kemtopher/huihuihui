@@ -70,17 +70,15 @@ $(document).ready(function() {
 
 	$('#info').click( function(e) {
 		e.preventDefault();
+		$('#header').toggleClass('open');
 
-		$('#header').toggleClass('open', 300).promise().done( function() {
-
-			if ( $('#header').hasClass('open') ) {
-				openMenu();
-			} else {
-				closeMenu();
-			}
+		if ( $('#header').hasClass('open') ) {
+			openMenu();
+		} else {
+			closeMenu();
+		};
 
 			$('#info-btn').toggleClass('info-btn-active');
-		});
 	});
 
 	if ( $('#header').hasClass('open') ) {
