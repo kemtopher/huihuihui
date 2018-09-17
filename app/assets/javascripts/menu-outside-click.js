@@ -52,10 +52,10 @@ $(document).ready(function() {
 		});
 
 		// MOBILE ADJUSTMENTS
-		// var screenWidth = screen.width;
-		// if ( screenWidth < 768) {
-		// 	$('body').css('overflow-y', 'scroll');	
-		// }
+		var screenWidth = screen.width;
+		if ( screenWidth < 768) {
+			$('body').css('overflow-y', 'scroll');	
+		}
 	};
 
 	function openMenu() {
@@ -66,10 +66,10 @@ $(document).ready(function() {
 		});
 
 		// MOBILE ADJUSTMENTS
-		// var screenWidth = screen.width;
-		// if ( screenWidth < 768) {
-		// 	$('body').css('overflow-y', 'hidden');	
-		// }
+		var screenWidth = screen.width;
+		if ( screenWidth < 768) {
+			$('body').css('overflow-y', 'hidden');	
+		}
 	};
 
 
