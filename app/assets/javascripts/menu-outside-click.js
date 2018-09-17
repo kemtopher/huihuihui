@@ -85,15 +85,13 @@ $(document).ready(function() {
 		};
 	});
 
-	detectswipe('swipe', function() {
-		if ( $('#header').hasClass('open') ) {
-			closeMenu();
-		};
-	});
 
-
-
-
+    $('#swipe').on('scroll', function() {
+        if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+        detectswipe('swipe', closeMenu() );
+        console.log('here at the end');
+        }
+    })
 
 
 });
