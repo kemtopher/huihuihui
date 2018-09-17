@@ -44,16 +44,15 @@ $(document).ready(function() {
 		},false);  
 	};
 
-	// MENU 
 	function closeMenu() {
 		$('.site-nav').css('border-top','solid 0px #000000');
 		$('.info-section').slideUp();
 
 		// MOBILE ADJUSTMENTS
-		var screenWidth = screen.width;
-		if ( screenWidth < 768) {
-			$('body').css('overflow-y', 'scroll');	
-		}
+		// var screenWidth = screen.width;
+		// if ( screenWidth < 768) {
+		// 	$('body').css('overflow-y', 'scroll');	
+		// }
 	};
 
 	function openMenu() {
@@ -61,10 +60,10 @@ $(document).ready(function() {
 		$('.info-section').slideDown();
 
 		// MOBILE ADJUSTMENTS
-		var screenWidth = screen.width;
-		if ( screenWidth < 768) {
-			$('body').css('overflow-y', 'hidden');	
-		}
+		// var screenWidth = screen.width;
+		// if ( screenWidth < 768) {
+		// 	$('body').css('overflow-y', 'hidden');	
+		// }
 	};
 
 
@@ -82,10 +81,10 @@ $(document).ready(function() {
 	});
 
 	if ( $('#header').hasClass('open') ) {
-    	detectswipe('header', closeMenu );
+    	detectswipe('.swiper', closeMenu );
 	}
 	else {
-		detectswipe('header', openMenu );
+		detectswipe('.swiper', openMenu );
 	};
 
 
