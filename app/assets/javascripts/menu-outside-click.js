@@ -46,7 +46,9 @@ $(document).ready(function() {
 
 	function closeMenu() {
 		$('.site-nav').css('border-top','solid 0px #000000');
-		$('.info-section').slideUp();
+		$('.info-section').slideUp('slow', function() {
+			$('#header').removeClass('open');
+		});
 
 		// MOBILE ADJUSTMENTS
 		// var screenWidth = screen.width;
@@ -57,7 +59,9 @@ $(document).ready(function() {
 
 	function openMenu() {
 		$('.site-nav').css('border-top','solid 1px #000000');
-		$('.info-section').slideDown();
+		$('.info-section').slideDown('slow', function() {
+			$('#header').addClass('open');
+		});
 
 		// MOBILE ADJUSTMENTS
 		// var screenWidth = screen.width;
@@ -69,7 +73,6 @@ $(document).ready(function() {
 
 	$('#info').click( function(e) {
 		e.preventDefault();
-		$('#header').toggleClass('open');
 
 		if ( $('#header').hasClass('open') ) {
 			openMenu();
