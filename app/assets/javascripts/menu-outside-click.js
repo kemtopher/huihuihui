@@ -85,16 +85,15 @@ $(document).ready(function() {
 		};
 	});
 
-	detectswipe('site-nav', function() {
-		if ( $('#header').hasClass('open') ) {
-			closeMenu();
-		} else {
-			openMenu();
+	window.onscroll = function(ev) {
+		if ( (window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+			detectswipe('site-nav', function() {
+				if ( $('#header').hasClass('open') ) {
+					closeMenu();
+				}
+			});
 		}
-	});
-
-
-
+	};
 
 
 
