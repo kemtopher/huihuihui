@@ -48,6 +48,7 @@ $(document).ready(function() {
 		$('.site-nav').css('border-top','solid 0px #000000');
 		$('.info-section').slideUp('slow', function() {
 			$('#header').removeClass('open');
+			$('#info-btn').removeClass('info-btn-active');
 		});
 
 		// MOBILE ADJUSTMENTS
@@ -61,6 +62,7 @@ $(document).ready(function() {
 		$('.site-nav').css('border-top','solid 1px #000000');
 		$('.info-section').slideDown('slow', function() {
 			$('#header').addClass('open');
+			$('#info-btn').addClass('info-btn-active');
 		});
 
 		// MOBILE ADJUSTMENTS
@@ -76,20 +78,20 @@ $(document).ready(function() {
 	$('#info').click( function(e) {
 		e.preventDefault();
 
-		if ( !$('#header').hasClass('open') ) {
-			openMenu();
-		} else {
+		if ( $('#header').hasClass('open') ) {
 			closeMenu();
+		} else {
+			openMenu();
 		};
 
-			$('#info-btn').toggleClass('info-btn-active');
+		
 	});
 
 	if ( $('#header').hasClass('open') ) {
-    	detectswipe('.swiper', closeMenu );
+    	detectswipe('header', closeMenu );
 	}
 	else {
-		detectswipe('.swiper', openMenu );
+		detectswipe('header', openMenu );
 	};
 
 
