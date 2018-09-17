@@ -133,7 +133,7 @@ ready = function() {
 
 
 	// BOTTOM FOOTER APPEARS AT PAGES END
-
+	
 	// var bottomTrigger = $('.single-img').last(),
 	var bottomTrigger = $('.bottom-img'),
 		bottomNav = $('.single-project-nav');

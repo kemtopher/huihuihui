@@ -83,16 +83,15 @@ $(document).ready(function() {
 		} else {
 			openMenu();
 		};
-
-		
 	});
 
-	if ( $('#header').hasClass('open') ) {
-    	detectswipe('header', closeMenu );
-	}
-	else {
-		detectswipe('header', openMenu );
-	};
+	detectswipe('swiper', function() {
+		if ( $('#header').hasClass('open') ) {
+			closeMenu();
+		} else {
+			openMenu();
+		}
+	});
 
 
 
