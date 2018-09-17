@@ -86,8 +86,9 @@ $(document).ready(function() {
 	});
 
 	window.onscroll = function(ev) {
-		if ( (window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-			detectswipe('site-nav', function() {
+		innerWindowSection = $('#swipe');
+		if ( ( innerWindowSection.innerHeight + innerWindowSection.scrollY ) >= innerWindowSection.offsetHeight) {
+			detectswipe('swipe', function() {
 				if ( $('#header').hasClass('open') ) {
 					closeMenu();
 				}
