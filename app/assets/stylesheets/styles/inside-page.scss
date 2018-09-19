@@ -2,8 +2,8 @@
 
 .single-titles {
     width: 100%;
-    // padding: 4em 0 2em 0;
-    padding: 31px 0 12px 0;
+    padding: 30px 0 12px 0;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -24,7 +24,6 @@
 
 .single-content {
     width: 100%;
-    // padding-top: 5%;
     display: flex;
     flex-direction: row;
 
@@ -68,7 +67,7 @@
     .single-portfolio {
         flex-basis: 66.66%;
         height: 100%;
-        margin-top: 30px;
+        // margin-top: 30px;
 
         .single-img {
             margin-bottom: 2em;

@@ -49,13 +49,14 @@ $(document).ready(function() {
 		$('.info-section').slideUp('slow', function() {
 			$('#header').removeClass('open');
 			$('#info-btn').removeClass('info-btn-active');
+			$('#header').removeClass('canClose');
 		});
 
 		// MOBILE ADJUSTMENTS
-		// var screenWidth = screen.width;
-		// if ( screenWidth < 768) {
-		// 	$('body').css('overflow-y', 'scroll');	
-		// }
+		var screenWidth = screen.width;
+		if ( screenWidth < 768) {
+			$('body').css('overflow-y', 'scroll');	
+		}
 	};
 
 	function openMenu() {
@@ -66,10 +67,10 @@ $(document).ready(function() {
 		});
 
 		// MOBILE ADJUSTMENTS
-		// var screenWidth = screen.width;
-		// if ( screenWidth < 768) {
-		// 	$('body').css('overflow-y', 'hidden');	
-		// }
+		var screenWidth = screen.width;
+		if ( screenWidth < 768) {
+			$('body').css('overflow-y', 'hidden');	
+		}
 	};
 
 
@@ -88,7 +89,7 @@ $(document).ready(function() {
 
     $('#swipe').on('scroll', function() {
         if( $(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-        	$('#header').addClass('canClose');
+        	// $('#header') 
 
         	if ( $('#header').hasClass('canClose') ) {
         		detectswipe('swipe', closeMenu() );
