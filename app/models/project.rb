@@ -16,6 +16,6 @@ class Project < ApplicationRecord
 	end 
 
 	def prev
-		Project.where("position < ?", position).order(position: :desc).first || Project.order(position: :desc).limit(17).first
+		Project.where("position < ?", position).order(position: :desc).first || Project.order(position: :desc).limit(16).first
 	end
 end
