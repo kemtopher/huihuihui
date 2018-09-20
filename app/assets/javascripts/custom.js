@@ -128,7 +128,7 @@ ready = function() {
 	// BOTTOM TO TOP LINK FUNCTION
 	
 	var figure = $('.top-link'),
-		trigger = $('.single-img:eq(1)');
+		trigger = $('.single-img:eq(3)');
 
 	var controller = new ScrollMagic.Controller();
 	
