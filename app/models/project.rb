@@ -8,16 +8,6 @@ class Project < ApplicationRecord
 	has_one_attached :poster_image
 
 
-	## GET THE NEXT AND PREVIOUS PROJECTS
-	
-	# def next
-	# 	Project.where("id > ?", id).order("id ASC").first || Project.first
-	# end 
-
-	# def prev
-	# 	Project.where("id < ?", id).order("id DESC").first || Project.last
-	# end
-
 
 	## PROJECTS NOT LOOPING FROM END TO BEGINNING 
 	## PROJECTS ALLOWING IN-ACTIVE PRODUCTS TO SORT

@@ -112,10 +112,17 @@ ready = function() {
 
 	// SCROLL TO TOP LINK
 
-	$('#top-link-icon').on( 'click',function(e) {
-		e.preventDefault();
-		$('html, body').animate({scrollTop:0},300);
-	})
+	var imgs= $('.single-img').length;
+	console.log(imgs);
+	if ( imgs > 2 ) {
+		$('#top-link-icon').on( 'click',function(e) {
+			e.preventDefault();
+			$('html, body').animate( { scrollTop: 0 }, 300 );
+		});
+	} else {
+		$('#top-link-icon').css('display', 'none');
+	}
+	
 
 
 	// BOTTOM TO TOP LINK FUNCTION

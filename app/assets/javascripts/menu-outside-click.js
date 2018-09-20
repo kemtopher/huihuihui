@@ -52,7 +52,6 @@ $(document).ready(function() {
 			$('#header').removeClass('canClose');
 		});
 
-		// MOBILE ADJUSTMENTS
 		var screenWidth = screen.width;
 		if ( screenWidth < 768) {
 			$('body').css('overflow-y', 'scroll');	
@@ -66,7 +65,6 @@ $(document).ready(function() {
 			$('#info-btn').addClass('info-btn-active');
 		});
 
-		// MOBILE ADJUSTMENTS
 		var screenWidth = screen.width;
 		if ( screenWidth < 768) {
 			$('body').css('overflow-y', 'hidden');	
@@ -85,7 +83,6 @@ $(document).ready(function() {
 			openMenu();
 		};
 	});
-
 
     $('#swipe').on('scroll', function() {
         if( $(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
