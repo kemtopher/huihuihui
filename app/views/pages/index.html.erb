@@ -1,3 +1,10 @@
+<script type="text/javascript">
+	var screenWidth = screen.width;
+
+	if ( screenWidth < 1024) {
+	 document.location = '<%= url_for( @projects.first ) %>';
+	}
+</script>
 
 <main id="main-container" class="front-main-container">
 
