@@ -110,12 +110,12 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-image: url( asset_path('images/poster-box-vacant.png') );
+            background-image: url( asset_path('images/poster-box-vacant.jpg') );
             background-size: cover;
             background-position: center center;
         }
         .show-poster.reverse {
-            background-image: url( asset_path('images/poster-reverse-box-vacant.png'))
+            background-image: url( asset_path('images/poster-reverse-box-vacant.jpg'))
         }
 
         .tall-show-poster {
@@ -124,7 +124,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-image: url( asset_path('images/poster-tall-box-vacant.png') );
+            background-image: url( asset_path('images/poster-tall-box-vacant.jpg') );
             background-size: cover;
             background-position: center center;
         }
@@ -132,8 +132,8 @@
 
     .tall-image {
         padding-right: 0;
-        height: 945px;
-        width: 630px;
+        height: 946px;
+        width: 653px;
     }
 }
 .tall-project-image {

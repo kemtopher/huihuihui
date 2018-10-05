@@ -2,6 +2,46 @@
 var ready;
 ready = function() {
 
+
+	function haveBeen() {
+		
+		function setCookie(cname, cvalue, exdays) {
+		    var d = new Date();
+		    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		    var expires = "expires="+ d.toUTCString();
+		    document.cookie = cname + "=" + cvalue + "; " + expires;
+		}
+
+		function getCookie(cname) {
+		    var name = cname + "=";
+		    var ca = document.cookie.split(';');
+		    for(var i = 0; i <ca.length; i++) {
+		        var c = ca[i];
+		        while (c.charAt(0)==' ') {
+		            c = c.substring(1);
+		        }
+		        if (c.indexOf(name) == 0) {
+		            return c.substring(name.length,c.length);
+		        }
+		    }
+		    return "";
+		}
+		
+		function checkCookie() {
+		    var visited = getCookie("visitedornot");
+		    if (visited != "") {
+		        document.location = '<%= url_for( root_path ) %>';
+		        
+		    } else {
+		       visited = "visited";
+		       if (visited != "" && visited != null) {
+		           setCookie("visitedornot", visited, 1000);
+		       }
+		       document.location = '<%= url_for( @projects.first ) %>';
+		    }
+		}
+	};
+
 	function noMobile(x) {
 	    if (x.matches) {
 	    	// THESE FUCTIONS RUN WHEN NOT A MOBILE SIZED DEVISE
@@ -26,9 +66,9 @@ ready = function() {
 				var posterHost = $(this).find(".project-box"),
 					posterImg = posterHost.attr("data-poster"),
 					bgPosition = posterHost.attr("data-position"),
-					tallPristine = '/images/poster-tall-box-vacant.png',
-					boxPristine = '/images/poster-box-vacant.png',
-					revBoxPristine = '/images/poster-reverse-box-vacant.png';
+					tallPristine = '/images/poster-tall-box-vacant.jpg',
+					boxPristine = '/images/poster-box-vacant.jpg',
+					revBoxPristine = '/images/poster-reverse-box-vacant.jpg';
 
 				if ( bgPosition == "#lowBG" ) {
 					$( bgPosition ).css('background-image', 'url(' + tallPristine + ')' );	
