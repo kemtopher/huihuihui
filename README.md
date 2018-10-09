@@ -1,7 +1,8 @@
 # DESCRIPTION
 
 Portfolio site created in collaboration with NY-based designer Hui Chen Ou Yang.  
-Site is created with Rails 5.2, Postgres, Active Record and 5.2's new addition Active Storage.
+Site is created with Rails 5.2, Postgres, Active Record and 5.2's new addition Active Storage.  
+Friendly ID used for semantic urls.  
 
 
 # COOL THINGS
