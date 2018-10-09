@@ -9,8 +9,8 @@ class Project < ApplicationRecord
 
 
 
-	## PROJECTS NOT LOOPING FROM END TO BEGINNING 
-	## PROJECTS ALLOWING IN-ACTIVE PRODUCTS TO SORT
+	## PROJECTS NAVIGATION LOOPS AT END AND BEGINNING 
+
 	def next
 		Project.where(:position => 1..17).where("position > ?", position).order(position: :asc).first || Project.where(:position => 1..17).order(position: :asc).first
 	end 
