@@ -94,7 +94,7 @@ ready = function() {
 			});
 
 	    } else {
-	    	console.log("h e l l o  m o t o");
+	    	// console.log("h e l l o  m o t o");
 	    }
 	};
 

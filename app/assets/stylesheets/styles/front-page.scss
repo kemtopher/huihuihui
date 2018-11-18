@@ -167,13 +167,19 @@
     }
 }
 
+// @media only screen and (min-width: 2560px) {
+//     .image-pad .tall-image {
+//         height: 1448px;
+//     }
+// }
+
 @media only screen and (min-width: 1800px) {
     .image-pad .image {
         width: 1000px;
         height: 666px;
     }
     .image-pad .tall-image {
-        height: 1500px;
+        height: 1448px;
     }
     .tall-project-wrap .project-wrap {
         height: 12.5%;
