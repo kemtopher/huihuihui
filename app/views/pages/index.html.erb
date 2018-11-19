@@ -11,14 +11,14 @@ function startUp() {}
 
 	<div class="project-block">
 		<div class="project-titles">
-
+			<% if @top_projects
 			<% @top_projects.each do |proj| %>
 				
 				<section class="project-wrap" data-cursor="<%= data_cursor_url(proj.cursor) %>">
 					<%= link_to proj do %>
 						<div class="project-box" data-position="#topBG" data-poster="<%= data_poster_url(proj.poster_image) %>">
-							<h2 class="project-box-serif"><%= proj.title %></h2>
-							<h2 class="project-box-sans"><%= proj.tags %></h2>
+							<h2 class="project-box-serif"><%= proj.try(:title) %></h2>
+							<h2 class="project-box-sans"><%= proj.try(:tags) %></h2>
 						</div>
 					<% end %>
 				</section>
@@ -53,8 +53,8 @@ function startUp() {}
 				<section class="project-wrap" data-cursor="<%= data_cursor_url(proj.cursor) %>">
 					<%= link_to proj do %>
 						<div class="project-box" data-position="#midBG" data-poster="<%= data_poster_url(proj.poster_image) %>">
-							<h2 class="project-box-serif"><%= proj.title %></h2>
-							<h2 class="project-box-sans"><%= proj.tags.upcase %></h2>
+							<h2 class="project-box-serif"><%#= proj.title %></h2>
+							<h2 class="project-box-sans"><%#= proj.tags.upcase %></h2>
 						</div>
 					<% end %>
 				</section>
@@ -69,8 +69,8 @@ function startUp() {}
 	<section class="project-wrap full-width-row" data-cursor="<%= data_cursor_url(@special_project.cursor) %>">
 		<%= link_to @special_project do %>
 			<div class="project-box" data-position="#midBG" data-poster="<%= data_poster_url( @special_project.poster_image ) %>">
-				<h2 class="project-box-serif"><%= @special_project.title %></h2>
-				<h2 class="project-box-sans"><%= @special_project.tags.upcase %></h2>
+				<h2 class="project-box-serif"><%#= @special_project.title %></h2>
+				<h2 class="project-box-sans"><%#= @special_project.tags.upcase %></h2>
 			</div>
 		<% end %>
 	</section>
@@ -86,8 +86,8 @@ function startUp() {}
 				<section class="project-wrap" data-cursor="<%= data_cursor_url(proj.cursor) %>">
 					<%= link_to proj do %>
 						<div class="project-box" data-position="#lowBG" data-poster="<%= data_poster_url(proj.poster_image) %>">
-							<h2 class="project-box-serif"><%= proj.title %></h2>
-							<h2 class="project-box-sans"><%= proj.tags.upcase %></h2>
+							<h2 class="project-box-serif"><%#= proj.title %></h2>
+							<h2 class="project-box-sans"><%#= proj.tags.upcase %></h2>
 						</div>
 					<% end %>
 				</section>

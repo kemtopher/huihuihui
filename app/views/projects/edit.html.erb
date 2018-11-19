@@ -6,7 +6,7 @@
 	
 		<h1>Create a new project here</h1>
 		<%= render 'shared/form' %>
-		<%= render 'shared/project_options' %>
+		<%#= render 'shared/project_options' %>
 	</div>
 
 	<div class="photos-block">
@@ -15,9 +15,14 @@
 		<div class="single-photos">
 			<% if @project.poster_image.present? %>
 				<%= image_tag(polymorphic_url( @project.poster_image )) %>
+			<% else %>
+				<%= image_tag( "https://via.placeholder.com/50x50" ) %>
 			<% end %>
+
 			<% if @project.cursor.present? %>
 				<%= image_tag(polymorphic_url( @project.cursor )) %>
+			<% else %>
+				<%= image_tag( "https://via.placeholder.com/50x50" ) %>
 			<% end %>
 		</div>	
 		
