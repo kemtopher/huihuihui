@@ -11,7 +11,6 @@ function startUp() {}
 
 	<div class="project-block">
 		<div class="project-titles">
-			<% if @top_projects
 			<% @top_projects.each do |proj| %>
 				
 				<section class="project-wrap" data-cursor="<%= data_cursor_url(proj.cursor) %>">
