@@ -13,9 +13,9 @@ function startUp() {}
 		<div class="project-titles">
 			<% @top_projects.each do |proj| %>
 				
-				<section class="project-wrap" data-cursor="<%= data_cursor_url(proj.cursor) %>">
+				<section class="project-wrap" data-cursor="<%#= data_cursor_url(proj.cursor) %>">
 					<%= link_to proj do %>
-						<div class="project-box" data-position="#topBG" data-poster="<%= data_poster_url(proj.poster_image) %>">
+						<div class="project-box" data-position="#topBG" data-poster="<%#= data_poster_url(proj.poster_image) %>">
 							<h2 class="project-box-serif"><%= proj.try(:title) %></h2>
 							<h2 class="project-box-sans"><%= proj.try(:tags) %></h2>
 						</div>
