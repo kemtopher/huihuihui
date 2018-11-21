@@ -46,9 +46,7 @@ function startUp() {}
 		</div>
 
 		<div class="project-titles">
-
 			<% @mid_projects.each do |proj| %>
-				
 				<section class="project-wrap" data-cursor="<%= data_cursor_url(proj.cursor) %>">
 					<%= link_to proj do %>
 						<div class="project-box" data-position="#midBG" data-poster="<%= data_poster_url(proj.poster_image) %>">
@@ -57,9 +55,7 @@ function startUp() {}
 						</div>
 					<% end %>
 				</section>
-
 			<% end %>
-
 		</div>
 	</div>
 
@@ -78,9 +74,7 @@ function startUp() {}
 
 
 	<div class="project-block last-project-block">	
-
 		<div class="project-titles tall-project-wrap">
-		
 			<% @bottom_projects.each do |proj| %>
 				<section class="project-wrap" data-cursor="<%= data_cursor_url(proj.cursor) %>">
 					<%= link_to proj do %>
@@ -90,9 +84,7 @@ function startUp() {}
 						</div>
 					<% end %>
 				</section>
-
 			<% end %>
-	
 		</div>
 
 		<div class="project-image image-pad tall-project-image">
@@ -100,7 +92,6 @@ function startUp() {}
 				<div id="lowBG" class="tall-show-poster"></div>
 			</div>
 		</div>
-
 	</div>
 
 </main>
