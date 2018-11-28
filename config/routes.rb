@@ -16,10 +16,10 @@ Rails.application.routes.draw do
   resources :projects do
     collection do
       patch :sort 
+
     end
     
     member do
-      # patch :sort
       delete :delete_image_attachment
     end
   end

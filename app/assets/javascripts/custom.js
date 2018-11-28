@@ -106,13 +106,23 @@ ready = function() {
 
 	// JQUERY SORTABLE IN PROJECTS
 
-	$("#project-list, #photos-list").sortable({
+	$("#project-list").sortable({
 		update: function(e, ui) {
 			Rails.ajax({
 				url: $(this).data("url"),
 				type: "PATCH",
 				data: $(this).sortable('serialize')
 			});
+		}
+	});
+
+	$("#photos-list").sortable({
+		update: function(e, ui) {
+			Rails.ajax({
+				url: $(this).data("url"),
+				type: "PATCH",
+				data: $(this).sortable('serialize')
+			})
 		}
 	});
 

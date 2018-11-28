@@ -29,6 +29,7 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    @project_images = @project.images.order(created_at: :asc)
   end
 
   def destroy
@@ -55,7 +56,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.friendly.find(params[:id])
-    @project_images = @project.images
+    @project_images = @project.images.order(created_at: :asc)
   end
 
   private 

@@ -14,8 +14,10 @@
 	<%= f.label :poster_image, 'Poster Image' %>
 	<%= f.file_field :poster_image %>
 
-	<%= f.label :images, 'Project Images' %>
-	<%= f.file_field :images, multiple: true %>
+	<% f.fields_for :images do |img_form| %>
+		<%= img_form.label :file, 'Project Images' %>
+		<%= img_form.file_field :file, multiple: true %>
+	<% end %>
 
 	<%= f.submit "#{action_name.capitalize} Project" %>
 <% end %> 
