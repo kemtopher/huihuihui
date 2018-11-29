@@ -14,8 +14,8 @@
 	<%= f.label :poster_image, 'Poster Image' %>
 	<%= f.file_field :poster_image %>
 
-		<%= f.label :images, 'Project Images' %>
-		<%= f.file_field :images, multiple: true %>
+	<%= f.label :images, 'Project Images' %>
+	<%= f.file_field :images, multiple: true %>
 
 	<%= f.submit "#{action_name.capitalize} Project" %>
 <% end %> 
