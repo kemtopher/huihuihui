@@ -5,14 +5,14 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
-    domain: "huioy.com/",
+    domain: "https://aqueous-retreat-43283.herokuapp.com/",
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: ENV["GMAIL_USERNAME"],
     password:ENV["GMAIL_PASSWORD"]
   }
   # doesn't have to be Heroku, but you get the idea.
-  config.action_mailer.default_url_options = { :host => 'huioy.com/' }
+  config.action_mailer.default_url_options = { :host => 'https://aqueous-retreat-43283.herokuapp.com/' }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
