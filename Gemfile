@@ -35,7 +35,10 @@ gem 'friendly_id'
 gem 'tinymce-rails'
 
 gem 'jquery-rails'
-gem 'aws-sdk-s3', '~> 1.0.0.rc2'
+# gem 'aws-sdk-s3', '~> 1.0.0.rc2'
+gem "aws-sdk-s3", require: false
+
+
 gem 'greensock-rails'
 
 # Use ActiveStorage variant

@@ -212,7 +212,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_list
-  aws-sdk-s3 (~> 1.0.0.rc2)
+  aws-sdk-s3
   bootsnap (>= 1.1.0)
   byebug
   coffee-rails (~> 4.2)
@@ -240,4 +240,4 @@ RUBY VERSION
    ruby 2.4.0p0
 
 BUNDLED WITH
-   1.14.6
+   1.16.3
