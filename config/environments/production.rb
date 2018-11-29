@@ -1,7 +1,11 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
+  
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
@@ -12,7 +16,7 @@ Rails.application.configure do
     password:ENV["GMAIL_PASSWORD"]
   }
   # doesn't have to be Heroku, but you get the idea.
-  config.action_mailer.default_url_options = { :host => 'https://aqueous-retreat-43283.herokuapp.com/' }
+  config.action_mailer.default_url_options = { :host => "https://aqueous-retreat-43283.herokuapp.com/" }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
