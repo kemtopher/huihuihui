@@ -1,10 +1,12 @@
 <div class="form-page-wrapper">
 	<div class="">
+		<! -- 
 		<%#= form_for @bio do |f| %>
 			<%#= f.label :copy, 'Personal Bio' %>
 			<%#= f.text_area :copy %>
 			<%#= f.submit %>
 		<%# end %> 
+		-->
 	</div>
 	<div id="project-list" data-url="<%= sort_projects_path %>">
 		<% @projects.each do |proj| %>
