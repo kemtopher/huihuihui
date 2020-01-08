@@ -42,7 +42,7 @@ gem "aws-sdk-s3", require: false
 gem 'greensock-rails'
 
 # Use ActiveStorage variant
-gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.9'
 
 
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
